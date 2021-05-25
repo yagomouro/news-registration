@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <script
+            type="module"
+            src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+        ></script>
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+        />
+
+        <link rel="stylesheet" href="scss/dist/main.css" />
+
+        <title>Cadastrar notícia</title>
+    </head>
+    <body>
+        <ion-app>
+            <div class="ion-page" id="main-content">
+                <ion-header>
+                    <ion-toolbar>
+                        <ion-title>Cadastrar notícia</ion-title>
+                    </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                    <form action="" method="">
+                        <ion-card>
+                            <ion-card-content>
+                                <ion-item>
+                                    <ion-label position="floating">
+                                        Autor
+                                    </ion-label>
+                                    <ion-input id="autor"></ion-input>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-label position="floating">
+                                        Fonte
+                                    </ion-label>
+                                    <ion-input id="fonte"></ion-input>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label position="floating">
+                                        Título
+                                    </ion-label>
+                                    <ion-input id="titulo"></ion-input>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-label position="floating">
+                                        Conteúdo
+                                    </ion-label>
+                                    <ion-input id="conteudo"></ion-input>
+                                </ion-item>
+
+                                <ion-button type="submit" color="primary">
+                                    Cadastrar notícia
+                                </ion-button>
+                            </ion-card-content>
+                        </ion-card>
+                    </form>
+                </ion-content>
+            </div>
+        </ion-app>
+    </body>
+</html>
