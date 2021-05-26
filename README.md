@@ -1,2 +1,3 @@
 # news-registration
-A simple news registration app, using sass and js
+A simple news registration app, using sass and php
+
