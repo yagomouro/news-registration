@@ -27,48 +27,83 @@
         <ion-app>
             <div class="ion-page" id="main-content">
                 <ion-header>
-                    <ion-toolbar>
-                        <ion-title>Cadastrar notícia</ion-title>
+                    <ion-toolbar color="primary">
+                        <h2 class="ion-text-center">Cadastrar notícia</h2>
                     </ion-toolbar>
                 </ion-header>
                 <ion-content class="ion-padding">
                     <form action="" method="">
                         <ion-card>
                             <ion-card-content>
-                                <ion-item>
-                                    <ion-label position="floating">
-                                        Autor
-                                    </ion-label>
-                                    <ion-input name="autor"></ion-input>
-                                </ion-item>
+                                <ion-grid>
+                                    <ion-row>
+                                        <ion-col>
+                                            <ion-item>
+                                                <ion-label position="floating">
+                                                    Autor
+                                                </ion-label>
+                                                <ion-input
+                                                    name="autor"
+                                                    id="autor"
+                                                ></ion-input>
+                                            </ion-item>
+                                        </ion-col>
 
-                                <ion-item>
-                                    <ion-label position="floating">
-                                        Fonte
-                                    </ion-label>
-                                    <ion-input name="fonte"></ion-input>
-                                </ion-item>
-                                <ion-item>
-                                    <ion-label position="floating">
-                                        Título
-                                    </ion-label>
-                                    <ion-input name="titulo"></ion-input>
-                                </ion-item>
+                                        <ion-col>
+                                            <ion-item>
+                                                <ion-label position="floating">
+                                                    Fonte
+                                                </ion-label>
+                                                <ion-input
+                                                    name="fonte"
+                                                    id="fonte"
+                                                ></ion-input>
+                                            </ion-item>
+                                        </ion-col>
+                                    </ion-row>
 
-                                <ion-item>
-                                    <ion-label position="floating">
-                                        Conteúdo
-                                    </ion-label>
-                                    <ion-input name="conteudo"></ion-input>
-                                </ion-item>
+                                    <ion-row>
+                                        <ion-col>
+                                            <ion-item>
+                                                <ion-label position="floating">
+                                                    Título
+                                                </ion-label>
+                                                <ion-input
+                                                    name="titulo"
+                                                    id="titulo"
+                                                ></ion-input>
+                                            </ion-item>
+                                        </ion-col>
+                                    </ion-row>
 
-                                <ion-button
-                                    class="btn-enviar"
-                                    type="submit"
-                                    color="primary"
-                                >
-                                    Cadastrar notícia
-                                </ion-button>
+                                    <ion-row>
+                                        <ion-col>
+                                            <ion-item>
+                                                <ion-label position="floating">
+                                                    Conteúdo
+                                                </ion-label>
+                                                <ion-textarea
+                                                    name="conteudo"
+                                                    id="conteudo"
+                                                    rows="10"
+                                                ></ion-textarea>
+                                            </ion-item>
+                                        </ion-col>
+                                    </ion-row>
+
+                                    <ion-row>
+                                        <ion-col>
+                                            <ion-button
+                                                class="btn-enviar"
+                                                type="submit"
+                                                color="primary"
+                                                id="btnEnviar"
+                                            >
+                                                Cadastrar notícia
+                                            </ion-button>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-grid>
                             </ion-card-content>
                         </ion-card>
                     </form>
@@ -76,4 +111,6 @@
             </div>
         </ion-app>
     </body>
+
+    <script src="js/formValidation.js"></script>
 </html>
