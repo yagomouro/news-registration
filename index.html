@@ -19,6 +19,8 @@
             href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
         />
 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
         <link rel="stylesheet" href="scss/dist/main.css" />
 
         <title>Cadastrar notícia</title>
@@ -32,7 +34,7 @@
                     </ion-toolbar>
                 </ion-header>
                 <ion-content class="ion-padding">
-                    <form action="create.php" method="POST">
+                    <form>
                         <ion-card>
                             <ion-card-content>
                                 <ion-grid>
@@ -93,7 +95,7 @@
 
                                     <ion-row>
                                         <ion-col>
-                                            <ion-button itemid="buttonSub"
+                                            <ion-button
                                                 class="btn-enviar"
                                                 type="submit"
                                                 color="primary"
@@ -101,6 +103,18 @@
                                             >
                                                 Cadastrar notícia
                                             </ion-button>
+                                        </ion-col>
+                                        <ion-col>
+                                            <a href="json.php">
+                                            <ion-button
+                                                class="btn-enviar"
+                                                type="button"
+                                                color="primary"
+                                                id="verJson"
+                                            >
+                                                Ver Json
+                                            </ion-button>
+                                            </a>
                                         </ion-col>
                                     </ion-row>
                                 </ion-grid>
@@ -112,7 +126,5 @@
         </ion-app>
     </body>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/formValidation.js"></script>
 </html>

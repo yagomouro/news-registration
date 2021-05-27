@@ -1,23 +1,34 @@
 $(document).ready(function(){
 
-	$("#buttonSub").click(function(){
+	$("#btnEnviar").click(function(){
+		var autor = $("#autor").val();
+		var fonte = $("#fonte").val();
+		var titulo = $("#titulo").val();
+		var conteudo = $("#conteudo").val();
 
-		$.ajax({
-		     url : "create.php", //Arquivo que receberá os dados
-		     type : 'post', //Método
-		     data : {
-		          nome : txt_nome//dados a serem processados pelo arquivo
-		     },
-		     beforeSend : function(){
-		          $("#resultado").html("ENVIANDO..."); //Gif de processando
-		     }
-		})
-		.done(function(msg){
-		     $("#resultado").load("ler.php"); //Exibindo os dados com sucesso
-		})
-		.fail(function(jqXHR, textStatus, msg){
-		     alert(msg); //Caso nada acima funcione...(erro)
-		});
+		if(autor == '' || fonte == '' || titulo == '' || conteudo == ''){
+			alert('Não foi possível cadastrar a notícia!');
+			location.reload();
+		}
+		else{
+			$.ajax({
+				url : "create.php",
+				type : 'post',
+				data : {
+					 autor,
+					 fonte,
+					 titulo,
+					 conteudo
+				}
+		   })
+		   .done(function(msg){
+				alert("Notícia cadastrada!");
+				location.reload();
+		   })
+		   .fail(function(jqXHR, textStatus, msg){
+				alert(msg);
+		   });
+		}
 
 	})
 	
