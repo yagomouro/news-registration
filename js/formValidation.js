@@ -1,9 +1,7 @@
-const autor = document.getElementById('autor');
-const fonte = document.getElementById('fonte');
-const titulo = document.getElementById('titulo');
-const conteudo = document.getElementById('conteudo');
-const btn = document.getElementById('btnEnviar');
 const form = document.querySelector('form');
+var fields = document.querySelectorAll('ion-input')
+const btnEnviar = document.getElementById('btnEnviar');
+const verJson = document.getElementById('verJson');
 
 
 form.addEventListener('submit', (e) => {
