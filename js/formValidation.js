@@ -3,9 +3,9 @@ const fonte = document.getElementById('fonte');
 const titulo = document.getElementById('titulo');
 const conteudo = document.getElementById('conteudo');
 const btn = document.getElementById('btnEnviar');
-const form = document.getElementById('form');
+const form = document.querySelector('form');
 
 
-btn.addEventListener('click', (event) => {
-  event.preventDefault();
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
 })
